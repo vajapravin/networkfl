@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.controlpanel')
+  angular.module('BlurAdmin.pages.controlpanel.rule')
       .controller('RuleTabCtrl', RuleTabCtrl);
 
   /** @ngInject */

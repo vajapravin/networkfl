@@ -44,7 +44,6 @@
     "wrench": "~1.5.8"
   },
   "scripts": {
-    "postinstall": "npm install && bower install"
   },
   "engines": {
    "npm": "4.1.2"

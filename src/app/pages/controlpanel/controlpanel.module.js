@@ -5,7 +5,10 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.controlpanel', [])
+  angular.module('BlurAdmin.pages.controlpanel', [
+      'BlurAdmin.pages.controlpanel.rule',
+      'BlurAdmin.pages.controlpanel.workflow'
+    ])
       .config(routeConfig);
 
   /** @ngInject */
