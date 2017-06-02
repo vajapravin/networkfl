@@ -45,7 +45,7 @@
     "wrench": "~1.5.8"
   },
   "scripts": {
-    "postinstall": "npm install gulp-cli",
+    "postinstall": "npm install gulp",
     "start": "gulp serve"
   },
   "engines": {
