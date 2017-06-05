@@ -1,14 +1,14 @@
 /**
- * @author v.lugovsky
- * created on 16.12.2015
+ * @author k.danovsky
+ * created on 15.01.2016
  */
 (function () {
   'use strict';
 
   angular.module('BlurAdmin.pages.controlpanel', [
-      'BlurAdmin.pages.controlpanel.rule',
-      'BlurAdmin.pages.controlpanel.workflow'
-    ])
+    'BlurAdmin.pages.controlpanel.rule',
+    'BlurAdmin.pages.controlpanel.workflow',
+  ])
       .config(routeConfig);
 
   /** @ngInject */
@@ -20,7 +20,7 @@
           title: 'Control Panel',
           sidebarMeta: {
             icon: 'ion-gear-a',
-            order: 0,
+            order: 100,
           },
         });
   }

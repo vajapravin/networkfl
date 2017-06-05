@@ -1,46 +1,29 @@
-<div class="row">
-  <div class="col-md-12">
-    <h3 class="with-line">
-      All Workflows
-      <button class="btn btn-primary pull-right" data-toggle="modal" ng-click="open('app/pages/controlpanel/workflow/workflowModal.html', 'sm')">Add Workflow</button>
-    </h3>
+<div ng-controller='workflowCtrl'>  
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="with-line">
+        All Workflows
+        <button class="btn btn-primary pull-right" data-toggle="modal" ng-click="open('app/pages/controlpanel/workflow/workflowNewModal.html', 'sm')">Add Workflow</button>
+      </h3>
+    </div>
   </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr class="black-muted-bg">
+        <th class="col-md-4">Name</th>
+        <th class="col-md-6">Type</th>
+        <th class="col-md-2">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="wf in workflows">
+        <td>{{wf['name']}}</td>
+        <td>{{wf['type']}}</td>
+        <td>
+          <a href="#" ng-click="edit('app/pages/controlpanel/workflow/workflowUpdateModal.html', 'sm', $index)"><span class="fa fa-pencil"></span></a>
+          <a href="#" ng-click="remove(wf)"><span class="fa fa-trash"></span></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-<table class="table table-condensed">
-  <thead>
-    <tr class="black-muted-bg">
-      <th class="col-md-4">Name</th>
-      <th class="col-md-6">Type</th>
-      <th class="col-md-2">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Instant Device Check</td>
-      <td>Script</td>
-      <td>
-        <a href="#"><span class="fa fa-pencil"></span></a>
-        <a href="#"><span class="fa fa-trash"></span></a>
-        <a href="#"><span class="fa fa-file"></span></a>
-      </td>
-    </tr>
-    <tr>
-      <td>Test WMI Credentials</td>
-      <td>Notification</td>
-      <td>
-        <a href="#"><span class="fa fa-pencil"></span></a>
-        <a href="#"><span class="fa fa-trash"></span></a>
-        <a href="#"><span class="fa fa-file"></span></a>
-      </td>
-    </tr>
-    <tr>
-      <td>URL Down Check</td>
-      <td>Notification</td>
-      <td>
-        <a href="#"><span class="fa fa-pencil"></span></a>
-        <a href="#"><span class="fa fa-trash"></span></a>
-        <a href="#"><span class="fa fa-file"></span></a>
-      </td>
-    </tr>
-  </tbody>
-</table>
